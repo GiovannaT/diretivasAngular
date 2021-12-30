@@ -7,6 +7,18 @@
 
 <div *ngIf= "mostrarCursos">Lista de Cursos</div>
 
+<!-- mesma coisa de:
+    <template [ngIf]="mostrarCursos">
+        <div>lista de cursos</div>
+    </template>
+
+    mesma coisa de:
+
+    <div template = "ngIf mostrarCursos">
+        lista de cursos
+    </div>
+ -->
+
 <div *ngIf= "!mostrarCursos">Não há curso para ser listado</div>
 
 <button (click)= "onMostrarCursos()">Mostrar ou esconder cursos</button>
