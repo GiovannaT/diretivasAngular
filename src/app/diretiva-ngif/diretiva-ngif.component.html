@@ -1,0 +1,18 @@
+<h5>*ngIf</h5>
+<!-- Alternativa para grandes árvores de elementos -->
+
+<div *ngIf= "cursos.length > 0">Lista de Cursos</div>
+
+<div *ngIf= "cursos.length === 0 ">Não há curso para ser listado</div>
+
+<div *ngIf= "mostrarCursos">Lista de Cursos</div>
+
+<div *ngIf= "!mostrarCursos">Não há curso para ser listado</div>
+
+<button (click)= "onMostrarCursos()">Mostrar ou esconder cursos</button>
+
+<!--Alterar elementos DOM é muito custoso. Alternativa para árvores DOM pequenas -->
+
+<h5>alternativa hidden e PropBinding</h5>
+<div [hidden]= "!mostrarCursos"> Lista de cursos PB </div>
+<div [hidden]= "mostrarCursos">Não existem cursos com PB</div>
